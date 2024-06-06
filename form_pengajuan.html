@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Pengajuan</title>
+    <style>
+        .input1 {
+            margin: 0% 0% 0% 10%;
+            padding-right: 20%;
+        }
+
+        .input2 {
+            margin: 0% 0% 0% 9%;
+            padding-right: 20%;
+        }
+
+        .input3 {
+            margin: 0% 0% 0% 11.8%;
+            padding-right: 20%;
+        }
+
+        .input4 {
+            margin: 0% 0% 0% 10%;
+            padding-right: 20%;
+        }
+
+        .center {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form {
+            margin: 0 20% 20% 20%;
+            padding: 10% 10% 10% 10%;
+            border: 3px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .button {            
+            align-items: center;
+            margin-left: 35%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        #myFile {
+            padding-left: 55%;
+        }
+
+        .dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.namapt {
+    padding-left: 20%;
+}
+
+#dd {
+    margin: 0% 8.5% 0% 0%;
+}
+
+#pg {
+    margin: 0% 0% 0% 7%;
+}
+
+</style>
+</head>
+<body style="background-color:white;">
+
+    </style>
+</head>
+<body>
+    <h2 class="center">Pengajuan Baru</h2>
+    <br>
+    <br>
+    
+        <label class="namapt" for="">Name PT</label>
+        <input placeholder="Masukkan Nama PT" class="input1" type="text">
+        <br>
+        <br>
+        <label class="namapt" for="">Nama Obat</label>
+        <input placeholder="Masukkan Nama Obat" class="input2" type="text">
+        <br>
+        <br>
+        <label class="namapt" for="">Dosis</label>
+        <input placeholder="Masukkan Dosis" class="input3" type="text">
+        <br>
+        <br>
+        <label id="dd" class="namapt" for="">SMF Tujuan</label>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Pilih SMF</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#anak">Anak</a>
+              <a href="#jantung">Jantung</a>
+              <a href="#tht">THT</a>
+              <a href="#bedah">Bedah</a>
+            </div>
+          </div>
+        <br>
+        <br>
+        <label class="namapt" for="">Deskripsi</label>
+        <input placeholder="Masukkan Deskripsi" class="input4" type="text">
+        <br>
+        <br>
+        <label class="namapt" for="">File Pendukung</label>
+        <input id="pg" type="file" id="myFile" name="filename">
+        <br>
+        <br>
+        <button class="button">Simpan</button>
+    
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+</body>
+</html>
